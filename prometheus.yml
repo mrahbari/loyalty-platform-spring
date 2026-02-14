@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'user-service'
+    static_configs:
+      - targets: ['user-service:8081']
+    metrics_path: '/actuator/prometheus'
+    
+  - job_name: 'voucher-service'
+    static_configs:
+      - targets: ['voucher-service:8082']
+    metrics_path: '/actuator/prometheus'
+    
+  - job_name: 'loyalty-service'
+    static_configs:
+      - targets: ['loyalty-service:8083']
+    metrics_path: '/actuator/prometheus'

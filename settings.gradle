@@ -1,0 +1,5 @@
+rootProject.name = 'loyalty-platform'
+include 'common'
+include 'user-service'
+include 'voucher-service'
+include 'loyalty-service'
